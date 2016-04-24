@@ -1,8 +1,0 @@
-D:\Worck\TBR\Rtb.Entity.Telegram\bin\Debug\Rtb.Entity.Telegram.dll.config
-D:\Worck\TBR\Rtb.Entity.Telegram\bin\Debug\Rtb.Entity.Telegram.dll
-D:\Worck\TBR\Rtb.Entity.Telegram\bin\Debug\Rtb.Entity.Telegram.pdb
-D:\Worck\TBR\Rtb.Entity.Telegram\bin\Debug\Newtonsoft.Json.dll
-D:\Worck\TBR\Rtb.Entity.Telegram\bin\Debug\Newtonsoft.Json.xml
-D:\Worck\TBR\Rtb.Entity.Telegram\obj\Debug\Rtb.Entity.Telegram.csprojResolveAssemblyReference.cache
-D:\Worck\TBR\Rtb.Entity.Telegram\obj\Debug\Rtb.Entity.Telegram.dll
-D:\Worck\TBR\Rtb.Entity.Telegram\obj\Debug\Rtb.Entity.Telegram.pdb
