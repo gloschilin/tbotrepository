@@ -1,26 +1,27 @@
 ﻿using System.ServiceProcess;
+using Rtb.Entity.Telegram;
 using Rtb.Rabbit;
 
 namespace Rtb.Service
 {
     public partial class RtbService : ServiceBase
     {
-        private readonly IRabbitServer _rabbitServer;
-
-        public RtbService(IRabbitServer rabbitServer)
+        private readonly RabbitServer<Update> _telegramUpdateRabbitServer;
+ 
+        public RtbService(RabbitServer<Update> telegramUpdateRabbitServer)
         {
-            _rabbitServer = rabbitServer;
+            _telegramUpdateRabbitServer = telegramUpdateRabbitServer;
             InitializeComponent();
         }
 
         protected override void OnStart(string[] args)
         {
-            _rabbitServer.Run();
+            _telegramUpdateRabbitServer.Run();
         }
 
         protected override void OnStop()
         {
-            _rabbitServer.Dispose();
+            _telegramUpdateRabbitServer.Dispose();
         }
     }
 }

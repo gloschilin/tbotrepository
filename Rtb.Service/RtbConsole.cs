@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using Microsoft.Practices.Unity;
+using Rtb.Entity.Telegram;
+using Rtb.Rabbit;
 
 namespace Rtb.Service
 {
@@ -13,12 +15,14 @@ namespace Rtb.Service
         static extern bool FreeConsole();
 
         [STAThread]
-        public static void Start(IUnityContainer container)
+        public static void Start(RabbitServer<Update> rabbitUpdateServer)
         {
             AllocConsole();
 
             Console.WriteLine(@"Console mode started...");
             Console.ReadLine();
+            
+            rabbitUpdateServer.Run();
 
             FreeConsole();
         }

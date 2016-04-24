@@ -1,5 +1,7 @@
 ﻿using System;
 using Microsoft.Practices.Unity;
+using Rtb.Entity.Telegram;
+using Rtb.Rabbit;
 
 namespace Rtb.Service
 {
@@ -13,12 +15,14 @@ namespace Rtb.Service
             
             RegisterTypes(Container.Value);
 
+            var telegramUpdateMessageServer = Container.Value.Resolve<RabbitServer<Update>>();
+
 #if (DEBUG)
-            RtbConsole.Start(Container.Value);
+            RtbConsole.Start(telegramUpdateMessageServer);
 #else
             var servicesToRun = new ServiceBase[]
             {
-                new RtbService()
+                new RtbService(telegramUpdateMessageServer)
             };
             ServiceBase.Run(servicesToRun);
 #endif
@@ -34,6 +38,7 @@ namespace Rtb.Service
         private static void RegisterTypes(IUnityContainer container)
         {
             //register application types
+
         }
     }
 }

@@ -11,7 +11,7 @@ namespace Rtb.Web.Infrastructure
         public UpdateTelegramRabbitClient(string rabbitHostName) 
             : base(rabbitHostName)
         {
-            Init();
+            
         }
 
         protected override string QueueName => "TelegramUpdate";

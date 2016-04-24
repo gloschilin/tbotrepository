@@ -9,6 +9,7 @@ namespace Rtb.Rabbit
     /// Interface for send message to rebit server
     /// </summary>
     public abstract class RabbitClient<TMessage> : IDisposable
+        where TMessage : class 
     {
         private readonly string _rabbitHostName;
         private IModel _chanelModel;
@@ -23,9 +24,11 @@ namespace Rtb.Rabbit
         public RabbitClient(string rabbitHostName)
         {
             _rabbitHostName = rabbitHostName;
+
+            Init();
         }
 
-        protected void Init()
+        private void Init()
         {
             var factory = new ConnectionFactory { HostName = _rabbitHostName };
             _connection = factory.CreateConnection();
@@ -38,11 +41,10 @@ namespace Rtb.Rabbit
         /// </summary>
         public virtual void Send(TMessage message)
         {
-            var json = JsonConvert.SerializeObject(message);
             var messageId = Guid.NewGuid();
-            var messageToSend = new RabbitMessage
+            var messageToSend = new RabbitMessage<TMessage>
             {
-                MessageJson = json,
+                Message = message,
                 MessageId = messageId
             };
 

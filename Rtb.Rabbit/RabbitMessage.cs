@@ -5,7 +5,8 @@ namespace Rtb.Rabbit
     /// <summary>
     /// Rabbit message
     /// </summary>
-    internal class RabbitMessage
+    internal class RabbitMessage<TMessage>
+        where TMessage : class 
     {
         /// <summary>
         /// Rabbit message identiry
@@ -15,6 +16,6 @@ namespace Rtb.Rabbit
         /// <summary>
         /// Message body
         /// </summary>
-        public string MessageJson { get; set; }
+        public TMessage Message { get; set; }
     }
 }

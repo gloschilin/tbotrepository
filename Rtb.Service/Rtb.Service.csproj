@@ -60,6 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Infrastructure\UpdateTelegramRabbitServer.cs" />
     <Compile Include="RtbConsole.cs" />
     <Compile Include="RtbService.cs">
       <SubType>Component</SubType>
@@ -75,6 +76,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Rtb.Entity.Telegram\Rtb.Entity.Telegram.csproj">
+      <Project>{EC2C40DE-F4B2-4168-8C49-8728B3230F3E}</Project>
+      <Name>Rtb.Entity.Telegram</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Rtb.Rabbit\Rtb.Rabbit.csproj">
       <Project>{CB62CFA7-0355-438D-9695-C8A22D9FFCD2}</Project>
       <Name>Rtb.Rabbit</Name>
