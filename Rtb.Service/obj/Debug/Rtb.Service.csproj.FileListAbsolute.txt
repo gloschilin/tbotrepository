@@ -1,0 +1,15 @@
+D:\Worck\TBR\Rtb.Service\bin\Debug\Rtb.Service.exe.config
+D:\Worck\TBR\Rtb.Service\bin\Debug\Rtb.Service.exe
+D:\Worck\TBR\Rtb.Service\bin\Debug\Rtb.Service.pdb
+D:\Worck\TBR\Rtb.Service\obj\Debug\Rtb.Service.csprojResolveAssemblyReference.cache
+D:\Worck\TBR\Rtb.Service\obj\Debug\Rtb.Service.exe
+D:\Worck\TBR\Rtb.Service\obj\Debug\Rtb.Service.pdb
+D:\Worck\TBR\Rtb.Service\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\Worck\TBR\Rtb.Service\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+D:\Worck\TBR\Rtb.Service\bin\Debug\Microsoft.Practices.Unity.dll
+D:\Worck\TBR\Rtb.Service\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
+D:\Worck\TBR\Rtb.Service\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+D:\Worck\TBR\Rtb.Service\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+D:\Worck\TBR\Rtb.Service\bin\Debug\Microsoft.Practices.Unity.xml
+D:\Worck\TBR\Rtb.Service\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+D:\Worck\TBR\Rtb.Service\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml

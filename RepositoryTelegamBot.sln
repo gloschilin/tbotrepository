@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rtb.Rabbit", "Rtb.Rabbit\Rt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rtb.Core", "Rtb.Core\Rtb.Core.csproj", "{523AAE85-0590-4172-91EF-DCB1606BFDF5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rtb.Service", "Rtb.Service\Rtb.Service.csproj", "{B7124237-E17F-4962-9F7D-2B5BC349D490}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{523AAE85-0590-4172-91EF-DCB1606BFDF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{523AAE85-0590-4172-91EF-DCB1606BFDF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{523AAE85-0590-4172-91EF-DCB1606BFDF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7124237-E17F-4962-9F7D-2B5BC349D490}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7124237-E17F-4962-9F7D-2B5BC349D490}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7124237-E17F-4962-9F7D-2B5BC349D490}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7124237-E17F-4962-9F7D-2B5BC349D490}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

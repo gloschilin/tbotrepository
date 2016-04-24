@@ -1,0 +1,9 @@
+D:\Worck\TBR\Rtb.Rabbit\bin\Debug\Rtb.Rabbit.dll
+D:\Worck\TBR\Rtb.Rabbit\bin\Debug\Rtb.Rabbit.pdb
+D:\Worck\TBR\Rtb.Rabbit\bin\Debug\Newtonsoft.Json.dll
+D:\Worck\TBR\Rtb.Rabbit\bin\Debug\RabbitMQ.Client.dll
+D:\Worck\TBR\Rtb.Rabbit\bin\Debug\Newtonsoft.Json.xml
+D:\Worck\TBR\Rtb.Rabbit\bin\Debug\RabbitMQ.Client.xml
+D:\Worck\TBR\Rtb.Rabbit\obj\Debug\Rtb.Rabbit.csprojResolveAssemblyReference.cache
+D:\Worck\TBR\Rtb.Rabbit\obj\Debug\Rtb.Rabbit.dll
+D:\Worck\TBR\Rtb.Rabbit\obj\Debug\Rtb.Rabbit.pdb
