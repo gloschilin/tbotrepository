@@ -27,6 +27,7 @@ namespace Rtb.Rabbit
             _rabbitHostName = rabbitHostName;
         }
 
+        //TODO: into interface
         public void Run()
         {
             var factory = new ConnectionFactory() { HostName = _rabbitHostName };
