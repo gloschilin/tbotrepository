@@ -62,20 +62,27 @@
   <ItemGroup>
     <Compile Include="Infrastructure\UpdateTelegramRabbitServer.cs" />
     <Compile Include="RtbConsole.cs" />
-    <Compile Include="RtbService.cs">
+    <Compile Include="RtbServiceBase.cs">
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="RtbService.Designer.cs">
-      <DependentUpon>RtbService.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\TelegramUpdateService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\TelegramUpdateService.Designer.cs">
+      <DependentUpon>TelegramUpdateService.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Rtb.Core.Interface\Rtb.Core.Interface.csproj">
+      <Project>{4D6C7D18-951F-46AF-B5CE-6D1E2D6B2269}</Project>
+      <Name>Rtb.Core.Interface</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Rtb.Entity.Telegram\Rtb.Entity.Telegram.csproj">
       <Project>{EC2C40DE-F4B2-4168-8C49-8728B3230F3E}</Project>
       <Name>Rtb.Entity.Telegram</Name>
@@ -85,6 +92,7 @@
       <Name>Rtb.Rabbit</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

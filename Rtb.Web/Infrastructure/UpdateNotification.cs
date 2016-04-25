@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
+using Rtb.Core.Interface;
 using Rtb.Entity.Telegram;
-using Rtb.Web.Controllers;
 
 namespace Rtb.Web.Infrastructure
 {

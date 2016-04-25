@@ -174,9 +174,6 @@
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\UnityMvcActivator.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\IConstantsContainer.cs" />
-    <Compile Include="Controllers\INotification.cs" />
-    <Compile Include="Controllers\INotificationHandler.cs" />
     <Compile Include="Controllers\TelegramController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -207,6 +204,10 @@
     <Content Include="Rtb.Web.ruleset" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Rtb.Core.Interface\Rtb.Core.Interface.csproj">
+      <Project>{4D6C7D18-951F-46AF-B5CE-6D1E2D6B2269}</Project>
+      <Name>Rtb.Core.Interface</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Rtb.Entity.Telegram\Rtb.Entity.Telegram.csproj">
       <Project>{ec2c40de-f4b2-4168-8c49-8728b3230f3e}</Project>
       <Name>Rtb.Entity.Telegram</Name>

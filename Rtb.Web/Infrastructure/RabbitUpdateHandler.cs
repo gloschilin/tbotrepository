@@ -1,6 +1,6 @@
+using Rtb.Core.Interface;
 using Rtb.Entity.Telegram;
 using Rtb.Rabbit;
-using Rtb.Web.Controllers;
 
 namespace Rtb.Web.Infrastructure
 {

@@ -1,5 +1,6 @@
 ﻿using System.Net;
 using System.Web.Http;
+using Rtb.Core.Interface;
 using Rtb.Entity.Telegram;
 
 namespace Rtb.Web.Controllers

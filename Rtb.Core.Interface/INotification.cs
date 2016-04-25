@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Rtb.Web.Controllers
+namespace Rtb.Core.Interface
 {
     /// <summary>
     /// Notification from services

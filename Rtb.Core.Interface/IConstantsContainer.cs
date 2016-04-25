@@ -1,4 +1,4 @@
-﻿namespace Rtb.Web.Controllers
+﻿namespace Rtb.Core.Interface
 {
     /// <summary>
     /// Application constants
@@ -9,5 +9,10 @@
         /// Repository telegram bot key
         /// </summary>
         string ApplicationKey { get; }
+
+        /// <summary>
+        /// Rabit host
+        /// </summary>
+        string RabbitHost { get; }
     }
 }

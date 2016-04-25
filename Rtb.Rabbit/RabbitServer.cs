@@ -1,19 +1,19 @@
-﻿using System;
-using System.Text;
+﻿using System.Text;
 using System.Threading;
 using Newtonsoft.Json;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
+using Rtb.Core.Interface;
 
 namespace Rtb.Rabbit
 {
     /// <summary>
     /// Redis server
     /// </summary>
-    public abstract class RabbitServer<TMessage>: IDisposable
+    public abstract class RabbitServer<TMessage>: IServer
         where TMessage : class
     {
-        private readonly string _rabbitHostName;
+        private readonly IConstantsContainer _constantsContainer;
         private IConnection _connection;
         private IModel _channel;
 
@@ -22,15 +22,15 @@ namespace Rtb.Rabbit
         /// </summary>
         protected abstract string QueueName { get; }
 
-        public RabbitServer(string rabbitHostName)
+        public RabbitServer(IConstantsContainer constantsContainer)
         {
-            _rabbitHostName = rabbitHostName;
+            _constantsContainer = constantsContainer;
         }
 
         //TODO: into interface
         public void Run()
         {
-            var factory = new ConnectionFactory() { HostName = _rabbitHostName };
+            var factory = new ConnectionFactory() { HostName = _constantsContainer.RabbitHost };
             _connection = factory.CreateConnection();
             _channel = _connection.CreateModel();
 

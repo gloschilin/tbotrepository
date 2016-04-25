@@ -1,4 +1,4 @@
-namespace Rtb.Web.Controllers
+namespace Rtb.Core.Interface
 {
     /// <summary>
     /// Handler for notification

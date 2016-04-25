@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rtb.Core", "Rtb.Core\Rtb.Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rtb.Service", "Rtb.Service\Rtb.Service.csproj", "{B7124237-E17F-4962-9F7D-2B5BC349D490}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rtb.Core.Interface", "Rtb.Core.Interface\Rtb.Core.Interface.csproj", "{4D6C7D18-951F-46AF-B5CE-6D1E2D6B2269}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{B7124237-E17F-4962-9F7D-2B5BC349D490}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7124237-E17F-4962-9F7D-2B5BC349D490}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7124237-E17F-4962-9F7D-2B5BC349D490}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D6C7D18-951F-46AF-B5CE-6D1E2D6B2269}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D6C7D18-951F-46AF-B5CE-6D1E2D6B2269}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D6C7D18-951F-46AF-B5CE-6D1E2D6B2269}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D6C7D18-951F-46AF-B5CE-6D1E2D6B2269}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

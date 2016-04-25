@@ -1,7 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
-using Microsoft.Practices.Unity;
-using Rtb.Entity.Telegram;
+using Rtb.Core.Interface;
 using Rtb.Rabbit;
 
 namespace Rtb.Service
@@ -15,14 +15,17 @@ namespace Rtb.Service
         static extern bool FreeConsole();
 
         [STAThread]
-        public static void Start(RabbitServer<Update> rabbitUpdateServer)
+        public static void Start(IEnumerable<IServer> serversToRun)
         {
             AllocConsole();
 
             Console.WriteLine(@"Console mode started...");
             Console.ReadLine();
-            
-            rabbitUpdateServer.Run();
+
+            foreach (var server in serversToRun)
+            {
+                server.Run();
+            }
 
             FreeConsole();
         }

@@ -1,5 +1,6 @@
 using System;
 using Microsoft.Practices.Unity;
+using Rtb.Core.Interface;
 using Rtb.Entity.Telegram;
 using Rtb.Rabbit;
 using Rtb.Web.Controllers;

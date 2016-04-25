@@ -1,4 +1,5 @@
 ﻿using System;
+using Rtb.Core.Interface;
 using Rtb.Entity.Telegram;
 using Rtb.Rabbit;
 
@@ -9,7 +10,8 @@ namespace Rtb.Service.Infrastructure
     /// </summary>
     public class UpdateTelegramRabbitServer : RabbitServer<Update>
     {
-        public UpdateTelegramRabbitServer(string rabbitHostName) : base(rabbitHostName)
+        public UpdateTelegramRabbitServer(IConstantsContainer constantsContainer) 
+            : base(constantsContainer)
         {
         }
 
