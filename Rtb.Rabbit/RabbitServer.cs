@@ -13,7 +13,7 @@ namespace Rtb.Rabbit
     public abstract class RabbitServer<TMessage>: IServer
         where TMessage : class
     {
-        private readonly IConstantsContainer _constantsContainer;
+        private readonly string _rabbitHostName;
         private IConnection _connection;
         private IModel _channel;
 
@@ -22,15 +22,15 @@ namespace Rtb.Rabbit
         /// </summary>
         protected abstract string QueueName { get; }
 
-        public RabbitServer(IConstantsContainer constantsContainer)
+        public RabbitServer(string rabbitHostName)
         {
-            _constantsContainer = constantsContainer;
+            _rabbitHostName = rabbitHostName;
         }
 
         //TODO: into interface
         public void Run()
         {
-            var factory = new ConnectionFactory() { HostName = _constantsContainer.RabbitHost };
+            var factory = new ConnectionFactory() { HostName = _rabbitHostName };
             _connection = factory.CreateConnection();
             _channel = _connection.CreateModel();
 

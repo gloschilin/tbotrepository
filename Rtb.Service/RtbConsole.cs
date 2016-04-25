@@ -15,16 +15,24 @@ namespace Rtb.Service
         static extern bool FreeConsole();
 
         [STAThread]
-        public static void Start(IEnumerable<IServer> serversToRun)
+        public static void Start(IReadOnlyCollection<IServer> serversToRun)
         {
             AllocConsole();
 
             Console.WriteLine(@"Console mode started...");
-            Console.ReadLine();
 
             foreach (var server in serversToRun)
             {
                 server.Run();
+                Console.WriteLine($"Server {server.GetType()} started");
+            }
+
+            Console.ReadLine();
+
+            foreach (var server in serversToRun)
+            {
+                server.Dispose();
+                Console.WriteLine($"Server {server.GetType()} stoped");
             }
 
             FreeConsole();

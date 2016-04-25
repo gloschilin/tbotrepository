@@ -23,17 +23,11 @@ namespace Rtb.Web.Controllers
         /// <summary>
         /// Get telegram update message
         /// </summary>
-        /// <param name="botKey"></param>
         /// <param name="update"></param>
         [HttpPost]
-        [Route("api/telegram/{botKey}/update")]
-        public void Update([FromUri]string botKey, [FromBody]Update update)
+        [Route("api/telegram/update")]
+        public void Update([FromBody]Update update)
         {
-            if (_constantsContainer.ApplicationKey != botKey)
-            {
-                StatusCode(HttpStatusCode.BadRequest);
-            }
-
             var handlers = _updateNotification.GetHandlers(update);
 
             foreach (var notificationHandler in handlers)

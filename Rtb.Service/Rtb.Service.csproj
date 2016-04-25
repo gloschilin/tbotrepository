@@ -83,6 +83,10 @@
       <Project>{4D6C7D18-951F-46AF-B5CE-6D1E2D6B2269}</Project>
       <Name>Rtb.Core.Interface</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Rtb.Core\Rtb.Core.csproj">
+      <Project>{523AAE85-0590-4172-91EF-DCB1606BFDF5}</Project>
+      <Name>Rtb.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Rtb.Entity.Telegram\Rtb.Entity.Telegram.csproj">
       <Project>{EC2C40DE-F4B2-4168-8C49-8728B3230F3E}</Project>
       <Name>Rtb.Entity.Telegram</Name>

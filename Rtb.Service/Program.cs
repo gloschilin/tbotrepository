@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.Practices.Unity;
+using Rtb.Core;
 using Rtb.Core.Interface;
-using Rtb.Entity.Telegram;
-using Rtb.Rabbit;
 using Rtb.Service.Infrastructure;
 
 namespace Rtb.Service
@@ -19,7 +18,7 @@ namespace Rtb.Service
             RegisterTypes(Container.Value);
 
 #if (DEBUG)
-            var serversToRun = Container.Value.Resolve<IEnumerable<IServer>>();
+            var serversToRun = Container.Value.Resolve<IEnumerable<IServer>>().ToArray();
             RtbConsole.Start(serversToRun);
 #else
             //var servicesToRun = new ServiceBase[]
@@ -40,8 +39,11 @@ namespace Rtb.Service
         private static void RegisterTypes(IUnityContainer container)
         {
             //register application types
+            container.RegisterType<IConstantsContainer, ConfigConstantsContainer>();
             container.RegisterType<IEnumerable<IServer>, IServer[]>();
-            container.RegisterType<IServer, UpdateTelegramRabbitServer>("UpdateTelegramRabbitServer");
+            container.RegisterType<IServer, UpdateTelegramRabbitServer>("UpdateTelegramRabbitServer",
+                new InjectionConstructor(container.Resolve<IConstantsContainer>().RabbitHost)
+            );
         }
     }
 }

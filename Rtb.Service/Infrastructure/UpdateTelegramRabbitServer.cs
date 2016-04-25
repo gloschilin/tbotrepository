@@ -10,8 +10,8 @@ namespace Rtb.Service.Infrastructure
     /// </summary>
     public class UpdateTelegramRabbitServer : RabbitServer<Update>
     {
-        public UpdateTelegramRabbitServer(IConstantsContainer constantsContainer) 
-            : base(constantsContainer)
+        public UpdateTelegramRabbitServer(string rabbitHostName) 
+            : base(rabbitHostName)
         {
         }
 
